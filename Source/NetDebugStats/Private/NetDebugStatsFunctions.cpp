@@ -203,6 +203,7 @@ bool UNetDebugStatsFunctions::GetPacketLostPercentage(const UObject* WorldContex
 			InPercentage = PlayerNetConnection->GetInLossPercentage().GetAvgLossPercentage();
 			OutPercentage = PlayerNetConnection->GetOutLossPercentage().GetAvgLossPercentage();
 		}
+		else
 		{
 			InPercentage = PlayerNetConnection->GetInLossPercentage().GetLossPercentage();
 			OutPercentage = PlayerNetConnection->GetOutLossPercentage().GetLossPercentage();
