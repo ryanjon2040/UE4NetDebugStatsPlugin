@@ -8,12 +8,12 @@
 	"CreatedBy": "Satheesh (ryanjon2040)",
 	"CreatedByURL": "https://www.buymeacoffee.com/ryanjon2040",
 	"DocsURL": "",
-	"MarketplaceURL": "",
-	"SupportURL": "",
+	"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/61f97c8434374b99979c417944ac3678",
+	"SupportURL": "https://discord.gg/5X6vaEJcEG",
 	"CanContainContent": true,
 	"IsBetaVersion": false,
 	"IsExperimentalVersion": false,
-	"Installed": false,
+	"Installed": true,
 	"Modules": [
 		{
 			"Name": "NetDebugStats",
