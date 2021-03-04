@@ -22,25 +22,6 @@ enum class ENetDebugStatConnectionState : uint8
 	Open
 };
 
-UENUM(BlueprintType)
-enum class ENetDebugStatClientLoginState : uint8
-{
-	/** This must be a client (which doesn't use this state) or uninitialized. */
-	Invalid,
-
-	/** The client is currently logging in. */
-	LoggingIn,
-
-	/** Told client to load map and will respond with SendJoin */
-	Welcomed,
-
-	/** NMT_Join received and a player controller has been created */
-	ReceivedJoin,
-
-	/** Cleanup has been called at least once, the connection is considered abandoned/terminated/gone */
-	CleanedUp
-};
-
 USTRUCT(BlueprintType)
 struct FNetDebugStatBytes
 {
@@ -110,14 +91,6 @@ public:
 	**/
 	UFUNCTION(BlueprintPure, Category = "Net Debug Stats", meta = (WorldContext = "WorldContextObject"))	
 	static ENetDebugStatConnectionState GetConnectionState(const UObject* WorldContextObject);
-
-	/**
-	* public static UNetDebugStatsFunctions::GetClientLoginState
-	* Tracks login state. Probably doesn't work for client.
-	* @return [ENetDebugStatClientLoginState] Login state
-	**/
-	UFUNCTION(BlueprintPure, Category = "Net Debug Stats", meta = (WorldContext = "WorldContextObject"))	
-	static ENetDebugStatClientLoginState GetClientLoginState(const UObject* WorldContextObject);
 
 	/**
 	* public static UNetDebugStatsFunctions::GetAverageLag

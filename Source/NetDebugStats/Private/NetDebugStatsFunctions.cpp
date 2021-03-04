@@ -48,35 +48,6 @@ ENetDebugStatConnectionState UNetDebugStatsFunctions::GetConnectionState(const U
 	return CurrentState;
 }
 
-ENetDebugStatClientLoginState UNetDebugStatsFunctions::GetClientLoginState(const UObject* WorldContextObject)
-{
-	ENetDebugStatClientLoginState CurrentState = ENetDebugStatClientLoginState::Invalid;
-
-	if (GET_CONNECTION)
-	{
-		EClientLoginState::Type ClientLoginState = PlayerNetConnection->ClientLoginState;
-		switch (ClientLoginState)
-		{
-			case EClientLoginState::LoggingIn:
-				CurrentState = ENetDebugStatClientLoginState::LoggingIn;
-				break;
-			case EClientLoginState::Welcomed:
-				CurrentState = ENetDebugStatClientLoginState::Welcomed;
-				break;
-			case EClientLoginState::ReceivedJoin:
-				CurrentState = ENetDebugStatClientLoginState::ReceivedJoin;
-				break;
-			case EClientLoginState::CleanedUp:
-				CurrentState = ENetDebugStatClientLoginState::CleanedUp;
-				break;
-			default:
-				break;
-		}
-	}
-
-	return CurrentState;
-}
-
 bool UNetDebugStatsFunctions::GetAverageLag(const UObject* WorldContextObject, float& OutAverageLag)
 {
 	if (GET_CONNECTION)
