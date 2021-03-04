@@ -1,0 +1,37 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "Network Debug Stats",
+	"Description": "Contains a widget that shows network stats as seen in Fortnite (ohhh yeahhh), PUBG etc.",
+	"Category": "Satheesh",
+	"CreatedBy": "Satheesh (ryanjon2040)",
+	"CreatedByURL": "https://www.buymeacoffee.com/ryanjon2040",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "NetDebugStats",
+			"Type": "Runtime",
+			"LoadingPhase": "PostEngineInit",
+			"WhitelistPlatforms": [
+				"Win64",
+				"Mac",
+				"XboxOne",
+				"PS4",
+				"IOS",
+				"Android",
+				"Linux",
+				"LinuxAArch64",
+				"TVOS",
+				"Switch",
+				"Lumin"
+			]
+		}
+	]
+}
