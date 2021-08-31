@@ -22,15 +22,12 @@
 			"WhitelistPlatforms": [
 				"Win64",
 				"Mac",
-				"XboxOne",
 				"PS4",
 				"IOS",
 				"Android",
 				"Linux",
-				"LinuxAArch64",
 				"TVOS",
-				"Switch",
-				"Lumin"
+				"Switch"
 			]
 		}
 	]
