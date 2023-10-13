@@ -26,7 +26,7 @@ ENetDebugStatConnectionState UNetDebugStatsFunctions::GetConnectionState(const U
 
 	if (GET_CONNECTION)
 	{
-		EConnectionState ConnectionState = PlayerNetConnection->State;		
+		EConnectionState ConnectionState = PlayerNetConnection->GetConnectionState();
 		switch (ConnectionState)
 		{
 			case USOCK_Closed:
